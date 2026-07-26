@@ -1,6 +1,6 @@
 # Bike Sharing Demand
 
-## **Check the final app live [here](https://bikesharingdemand-368tchrc5fhpkgsstquwq7.streamlit.app/)**
+## **Check the final app live [here](https://bikesharingdemand-ieyv3duzrkv9sbptgttda9.streamlit.app/)**
 
 Predicting hourly bike-rental demand from weather and calendar data, built as an
 end-to-end project: EDA → model experimentation → a tracked, reproducible
