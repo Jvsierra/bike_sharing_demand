@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\".venv/Scripts/python.exe\" -)",
+      "Bash(\".venv/Scripts/jupyter.exe\" nbconvert *)",
+      "Bash(\".venv/Scripts/python.exe\" -c \"import sklearn; print\\('sklearn', sklearn.__version__\\)\")",
+      "Bash(\".venv/Scripts/python.exe\" -m pip install scikit-learn lightgbm xgboost)",
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(\".venv/Scripts/python.exe\" -c \"import statsmodels; print\\(statsmodels.__version__\\)\")",
+      "Bash(\".venv/Scripts/python.exe\" -m pip install statsmodels)",
+      "Bash(\".venv/Scripts/python.exe\" -X utf8 -)",
+      "Bash(.venv/Scripts/python.exe -X utf8 -c ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(./.venv/Scripts/python.exe -c ' *)",
+      "Bash(\"./.venv/Scripts/python.exe\" -c \"import mlflow; print\\(mlflow.__version__\\)\")",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install mlflow==2.19.0)",
+      "Bash(\"./.venv/Scripts/python.exe\" --version)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip index versions pyarrow)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip download --no-deps --dest /tmp pyarrow==21.0.0)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install --dry-run mlflow-skinny==2.19.0)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install mlflow-skinny==2.19.0)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m src.train)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m src.predict)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m mlflow ui --help)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install flask)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m mlflow ui --port 5551)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:5551)",
+      "Bash(kill %1)",
+      "Read(//tmp/**)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install waitress)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m src.pipeline)",
+      "Bash(touch scripts/__init__.py)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m scripts.generate_readme_assets)"
+    ]
+  }
+}
