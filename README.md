@@ -74,6 +74,7 @@ src/
   train.py                     Trains the LightGBM pipeline, cross-validates, logs to MLflow.
   predict.py                   Loads a trained model from MLflow, scores test.csv.
   pipeline.py                  Runs train -> predict end to end.
+  app.py                       Streamlit page listing the predictions in submissions.csv.
 
 scripts/
   generate_readme_assets.py    Regenerates the charts above.
@@ -89,10 +90,18 @@ mlruns/                        Local MLflow tracking store (git-ignored).
 python -m pip install -r requirements.txt # install requirements
 python -m src.pipeline                    # train, log to MLflow, score test.csv
 python -m mlflow ui --port 5551           # inspect experiment runs/metrics
+streamlit run src/app.py                  # view the predictions in a browser table
 ```
 
 Full CLI flags, architecture notes, and the reasoning behind each modeling decision are in
 [CLAUDE.md](CLAUDE.md).
+
+## Predictions viewer
+
+`src/app.py` is a single-page Streamlit app that reads `data/submissions.csv` and displays
+it as one table, with human-readable column names (`Date & Time`, `Predicted Bike
+Rentals`). Run `python -m src.pipeline` (or `python -m src.predict`) at least once to
+generate `submissions.csv` before launching it.
 
 ## Known limitations / future work
 

@@ -30,7 +30,8 @@
       "Bash(\"./.venv/Scripts/python.exe\" -m pip install waitress)",
       "Bash(\"./.venv/Scripts/python.exe\" -m src.pipeline)",
       "Bash(touch scripts/__init__.py)",
-      "Bash(\"./.venv/Scripts/python.exe\" -m scripts.generate_readme_assets)"
+      "Bash(\"./.venv/Scripts/python.exe\" -m scripts.generate_readme_assets)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pip install streamlit)"
     ]
   }
 }
